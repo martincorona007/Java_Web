@@ -15,9 +15,11 @@
     </head>
     <body>
         <form method="POST" action="EcomerceController" name="frmAddProduct">
-            Name : <input type="text" name="name"value="<c:out value="${prod.name}" />" /> <br /> 
-            Characteristics : <input type="text" name="charact"value="<c:out value="${user.charat}" />" /> <br /> 
-            Price : <input type="text" name="price"value="<c:out value="${user.price}" />" /> <br /> 
+            ID_p : <input type="text" readonly="readonly" name="ID_p"value="<c:out value="${products.ID_p}" />" /> <br /> 
+            Name : <input type="text" name="name"value="<c:out value="${products.name}" />" /> <br /> 
+            Characteristics : <input type="text" name="charact"value="<c:out value="${products.charat}" />" /> <br /> 
+            Price : <input type="text" name="price"value="<c:out value="${products.price}" />" /> <br /> 
+            <input type="submit" value="Submit" />
         </form>
     </body>
 </html>

@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 public class EcomerceController extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    private static String INSERT_OR_EDIT = "/ecomerce.jsp";
+    private static String INSERT_OR_EDIT = "/ecomerceiu.jsp";
     private static String LIST_USER = "/listEcomerce.jsp";
     private EcomerceDao dao;
     public EcomerceController(){
@@ -44,7 +44,7 @@ public class EcomerceController extends HttpServlet {
             forward = INSERT_OR_EDIT;
             int proId = Integer.parseInt(request.getParameter("ID_p"));
             Ecomerce user = dao.getProdById(proId);
-            request.setAttribute("products", user);
+            request.setAttribute("product", user);
         } else if (action.equalsIgnoreCase("listEcomerce")) {
             forward = LIST_USER;
             request.setAttribute("products", dao.getAllUsers());
@@ -62,7 +62,7 @@ public class EcomerceController extends HttpServlet {
             throws ServletException, IOException {
         Ecomerce eco = new Ecomerce();
         eco.setName(request.getParameter("name"));
-        eco.setCharat(request.getParameter("charat"));
+        eco.setCharat(request.getParameter("charact"));
         eco.setPrice(Double.parseDouble(request.getParameter("price")));
         String proid = request.getParameter("ID_p");
         if (proid == null || proid.isEmpty()) {
