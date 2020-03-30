@@ -36,15 +36,15 @@ public class EcomerceController extends HttpServlet {
         String action = request.getParameter("action");
 
         if (action.equalsIgnoreCase("delete")) {
-            int proId = Integer.parseInt(request.getParameter("ID_p"));
+            int proId = Integer.parseInt(request.getParameter("prodId"));
             dao.deleteUser(proId);
             forward = LIST_USER;
             request.setAttribute("products", dao.getAllUsers());
         } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
-            int proId = Integer.parseInt(request.getParameter("ID_p"));
+            int proId = Integer.parseInt(request.getParameter("prodId"));
             Ecomerce user = dao.getProdById(proId);
-            request.setAttribute("product", user);
+            request.setAttribute("products", user);
         } else if (action.equalsIgnoreCase("listEcomerce")) {
             forward = LIST_USER;
             request.setAttribute("products", dao.getAllUsers());
@@ -64,7 +64,7 @@ public class EcomerceController extends HttpServlet {
         eco.setName(request.getParameter("name"));
         eco.setCharat(request.getParameter("charact"));
         eco.setPrice(Double.parseDouble(request.getParameter("price")));
-        String proid = request.getParameter("ID_p");
+        String proid = request.getParameter("prodId");
         if (proid == null || proid.isEmpty()) {
             dao.addProduct(eco);
         } else {

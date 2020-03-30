@@ -15,7 +15,7 @@
     </head>
     <body>
         <form method="POST" action="EcomerceController" name="frmAddProduct">
-            ID_p : <input type="text" readonly="readonly" name="ID_p"value="<c:out value="${products.ID_p}" />" /> <br /> 
+            ID : <input type="text" readonly="readonly" name="proId" value="<c:out value="${products.ID_prodt}" />" /> <br /> 
             Name : <input type="text" name="name"value="<c:out value="${products.name}" />" /> <br /> 
             Characteristics : <input type="text" name="charact"value="<c:out value="${products.charat}" />" /> <br /> 
             Price : <input type="text" name="price"value="<c:out value="${products.price}" />" /> <br /> 
