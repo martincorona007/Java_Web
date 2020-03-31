@@ -7,6 +7,7 @@ package com.controller;
 
 import com.dao.EcomerceDao;
 import com.model.Ecomerce;
+import com.model.Sales;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -23,8 +24,11 @@ public class EcomerceController extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/ecomerceiu.jsp";
-    private static String LIST_USER = "/listEcomerce.jsp";
+    private static String LIST_PRO = "/listEcomerce.jsp";
+    private static String BUY_PRO = "/buy.jsp";
+    private static String BUY_PRO2 = "/buyproduct.jsp";
     private EcomerceDao dao;
+    
     public EcomerceController(){
         super();
         dao=new EcomerceDao();
@@ -37,17 +41,22 @@ public class EcomerceController extends HttpServlet {
 
         if (action.equalsIgnoreCase("delete")) {
             int proId = Integer.parseInt(request.getParameter("prodId"));
-            dao.deleteUser(proId);
-            forward = LIST_USER;
-            request.setAttribute("products", dao.getAllUsers());
+            dao.deleteProduct(proId);
+            forward = LIST_PRO;
+            request.setAttribute("products", dao.getAllProducts());
         } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
             int proId = Integer.parseInt(request.getParameter("prodId"));
             Ecomerce user = dao.getProdById(proId);
             request.setAttribute("products", user);
-        } else if (action.equalsIgnoreCase("listEcomerce")) {
-            forward = LIST_USER;
-            request.setAttribute("products", dao.getAllUsers());
+        } else if(action.equalsIgnoreCase("buying")){
+            forward=BUY_PRO;
+            int proId = Integer.parseInt(request.getParameter("prodId"));
+            Ecomerce user = dao.getProdById(proId);
+            request.setAttribute("products", user);
+        }else if (action.equalsIgnoreCase("listEcomerce")) {
+            forward = LIST_PRO;
+            request.setAttribute("products", dao.getAllProducts());
         } else {
             forward = INSERT_OR_EDIT;
         }
@@ -60,19 +69,46 @@ public class EcomerceController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Ecomerce eco = new Ecomerce();
-        eco.setName(request.getParameter("name"));
-        eco.setCharat(request.getParameter("charact"));
-        eco.setPrice(Double.parseDouble(request.getParameter("price")));
-        String proid = request.getParameter("prodId");
-        if (proid == null || proid.isEmpty()) {
-            dao.addProduct(eco);
-        } else {
-            eco.setID_prodt(Integer.parseInt(proid));
-            dao.updateUser(eco);
-        }
-        RequestDispatcher view = request.getRequestDispatcher(LIST_USER);
-        request.setAttribute("products", dao.getAllUsers());
+        
+            Sales sa = new Sales();
+            if(request.getParameter("button1")!=null){
+                double price;
+                int cua, res1, id;
+                double sub, total, iva;
+                price = Double.parseDouble(request.getParameter("price"));
+                cua = Integer.parseInt(request.getParameter("quanti"));
+                id=Integer.parseInt(request.getParameter("proId"));
+                res1 = cua * (int) price;
+                iva = res1 * 0.16;
+                total = res1 + iva;
+                sa.setFK_ID_p(id);
+                sa.setQuantity(cua);
+                sa.setTotal_price(total);
+                System.out.println("ENTRY 4004 " + sa.getFK_ID_p() + " " + sa.getQuantity() + " " + sa.getTotal_price());
+                dao.addSales(sa);
+            }else{
+                Ecomerce eco = new Ecomerce();
+                eco.setName(request.getParameter("name"));
+                eco.setCharat(request.getParameter("charact"));
+                eco.setPrice(Double.parseDouble(request.getParameter("price")));
+                String proid = request.getParameter("proId");
+                if (proid == null || proid.isEmpty()) {
+                    dao.addProduct(eco);
+                } else {
+                    eco.setID_prodt(Integer.parseInt(proid));
+                    dao.updateProduct(eco);
+                }
+                RequestDispatcher view = request.getRequestDispatcher(LIST_PRO);
+                request.setAttribute("products", dao.getAllProducts());
+                view.forward(request, response);
+            }
+            
+            
+        
+        
+        
+        RequestDispatcher view = request.getRequestDispatcher(LIST_PRO);
+        request.setAttribute("products", dao.getAllProducts());
         view.forward(request, response);
     }
 

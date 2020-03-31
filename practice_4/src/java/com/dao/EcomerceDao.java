@@ -7,6 +7,7 @@ package com.dao;
 
 
 import com.model.Ecomerce;
+import com.model.Sales;
 import com.util.DbUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -40,7 +41,7 @@ public class EcomerceDao {
         }
 
 }
-    public void deleteUser(int proId) {
+    public void deleteProduct(int proId) {
         try {
             PreparedStatement preparedStatement = connection
                     .prepareStatement("delete from product where ID_p=?");
@@ -52,7 +53,7 @@ public class EcomerceDao {
             e.printStackTrace();
         }
     }
-    public void updateUser(Ecomerce eco) {
+    public void updateProduct(Ecomerce eco) {
         try {
             PreparedStatement preparedStatement = connection
                     .prepareStatement("update product set name=?, charact=?, price=? where ID_p=?");
@@ -67,7 +68,7 @@ public class EcomerceDao {
             e.printStackTrace();
         }
     }
-    public List<Ecomerce> getAllUsers() {
+    public List<Ecomerce> getAllProducts() {
         List<Ecomerce> ecos = new ArrayList<Ecomerce>();
         try {
             Statement statement = connection.createStatement();
@@ -105,5 +106,19 @@ public class EcomerceDao {
         }
         return ecos;
     }
+    public void addSales(Sales sale){
+    try {
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into sales(FK_ID_p,quantity,total_price) values (?, ?, ?)");
+            // Parameters start with 1
+            preparedStatement.setString(1, String.valueOf(sale.getFK_ID_p()));
+            preparedStatement.setString(2, String.valueOf(sale.getQuantity()));
+            preparedStatement.setString(3, Double.toString(sale.getTotal_price()));
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+}
 }
 

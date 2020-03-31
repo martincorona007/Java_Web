@@ -21,7 +21,7 @@
                     <th>Name</th>
                     <th>Characteristics</th>
                     <th>Price</th>
-                    <th colspan=2>Action</th>
+                    <th colspan=3>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,10 +33,12 @@
                         <td><c:out value="${prod.price}" /></td>
                         <td><a href="EcomerceController?action=edit&prodId=<c:out value="${prod.ID_prodt}"/>">Update</a></td>
                         <td><a href="EcomerceController?action=delete&prodId=<c:out value="${prod.ID_prodt}"/>">Delete</a></td>
+                        <td><a href="EcomerceController?action=buying&prodId=<c:out value="${prod.ID_prodt}"/>">Buy</a></td>
                     </tr>
                 </c:forEach>
+                    
             </tbody>
         </table>
-        <p><a href="EcomerceController?action=insert">Add User</a></p>
+        <p><a href="EcomerceController?action=insert">Add Product</a></p>
     </body>
 </html>
