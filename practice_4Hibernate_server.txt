@@ -1,0 +1,1 @@
+jdbc:mysql://localhost:3306/ecomerce?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
