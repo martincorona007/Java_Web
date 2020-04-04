@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 4, 2020 10:14:32 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.Product" table="product" catalog="ecomerce" optimistic-lock="version">
+        <id name="ID_p" type="java.lang.Integer">
+            <column name="ID_p" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="40" not-null="true" />
+        </property>
+        <property name="charact" type="string">
+            <column name="charact" length="80" not-null="true" />
+        </property>
+        <property name="price" type="double">
+            <column name="price" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
