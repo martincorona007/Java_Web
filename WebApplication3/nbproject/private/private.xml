@@ -2,15 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/hibernate.reveng.xml</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/com/model/Product.java</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/com/dao/EcomerceDao.java</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/com/util/NewHibernateUtil.java</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/hibernate.cfg.xml</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/web/listEcomerce.jsp</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/com/model/Product.hbm.xml</file>
-            <file>file:/C:/Users/sicar/Documents/NetBeansProjects/WebApplication3/src/java/com/controller/EcomerceController.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
