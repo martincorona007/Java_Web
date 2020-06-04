@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 3, 2020 6:22:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.Reservation" table="reservation" catalog="chata_restaurant" optimistic-lock="version">
+        <id name="idR" type="java.lang.Integer">
+            <column name="ID_r" />
+            <generator class="identity" />
+        </id>
+        <property name="dateRes" type="date">
+            <column name="date_res" length="10" not-null="true" />
+        </property>
+        <property name="timeRes" type="time">
+            <column name="time_res" length="8" not-null="true" />
+        </property>
+        <set name="clCps" table="cl_cp" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_ID_r" not-null="true" />
+            </key>
+            <one-to-many class="com.model.ClCp" />
+        </set>
+        <set name="characteristicses" table="characteristics" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_ID_r" not-null="true" />
+            </key>
+            <one-to-many class="com.model.Characteristics" />
+        </set>
+    </class>
+</hibernate-mapping>

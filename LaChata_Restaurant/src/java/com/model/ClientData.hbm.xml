@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 3, 2020 6:22:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.model.ClientData" table="client_data" catalog="chata_restaurant" optimistic-lock="version">
+        <id name="idCd" type="java.lang.Integer">
+            <column name="ID_cd" />
+            <generator class="identity" />
+        </id>
+        <property name="FName" type="string">
+            <column name="f_name" length="40" not-null="true" />
+        </property>
+        <property name="LName" type="string">
+            <column name="l_name" length="40" not-null="true" />
+        </property>
+        <property name="cellPhone" type="string">
+            <column name="cell_phone" length="15" not-null="true" />
+        </property>
+        <set name="clCps" table="cl_cp" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FK_ID_cd" not-null="true" />
+            </key>
+            <one-to-many class="com.model.ClCp" />
+        </set>
+    </class>
+</hibernate-mapping>
