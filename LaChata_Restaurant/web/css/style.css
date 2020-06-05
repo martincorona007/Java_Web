@@ -1,0 +1,38 @@
+
+/*===================HEADER===============*/
+
+.header{
+width: 100%;    
+}
+.header-overlay{
+    padding-top: 80px;
+    
+}
+.picture-1{
+    width: 120px;
+    padding-left: 380px;
+
+}
+#alter{
+    width:500px;
+    height:440px;
+}
+.centers{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+.boton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*===================HEADER===============*/
+.menu{
+    
+}
+.menu-overlay{
+    padding-top: 280px;
+    padding-bottom: 280px;
+}

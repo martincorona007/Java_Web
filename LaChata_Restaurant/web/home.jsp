@@ -37,10 +37,60 @@
         
     </head>
     <body>
-        <h1>Hello FUTURE!</h1>
-        <!--Header-->
-        <header></header>
         
+        <!--Header-->
+        <header class="header">
+            <!-- Navigation-->
+            <nav class="navbar navbar-default navbar-fixed-top">
+              
+                
+                <div class="container">
+                  
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#chata-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      
+                    </div>
+                 
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                      <img src="../../../../Build by me/ITS/JAVAWEB/P3/markup/pictures/chata-logo.png" alt=""/>
+                        <li><a href="#HOME" class="nav-item">Inicio</a></li>
+                        <li><a href="#ABOUT" class="nav-item">Menu</a></li>
+                        <li><a href="#FEATURES" class="nav-item">Reservarción</a></li>
+                        <li><a href="#SCREENS" class="nav-item">Galeria</a></li>
+                        <li><a href="#DOWNLOAD" class="nav-item">Contacto</a></li>
+                  </ul>
+                 
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+	    </nav>
+            
+            <div class="header-overlay">
+                <div class="centers">
+                 
+                       <div class="picture-1">
+                                 <img id="alter"src="images/chata-logo.png" alt = "header-logo">
+                       </div>
+                  
+                </div>
+            </div>
+            <div class="boton">
+                <input type="submit" class="btn btn-success btn-lg"value="Reservar" />
+            </div>
+        </header>
+        <!--Menu-->
+        <section class="menu">
+            <div class="menu-overlay">
+             
+            </div>
+        </section>
         <!--Galerie-->
         
         <!--Contact Address Schedule-->
