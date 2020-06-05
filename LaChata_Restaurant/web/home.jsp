@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="boton">
-                <input type="submit" class="btn btn-success btn-lg"value="Reservar" />
+                <input type="submit" class="btn btn-success btn-lg"value="Reservarción" />
             </div>
         </header>
         <!--Gallery-->
@@ -163,18 +163,44 @@
                 <div class="row">
                     <div class="col-md-4">
                     <h3>Contacto</h3>
+                    <p>Cel : 331 051 0024 </p>
                     </div>
                     <div class="col-md-4">
                         <h3>Dirección</h3>
+                        <p>Federación #250 Col. La Perla, Gdl. Jal.</p>
                     </div>
                     <div class="col-md-4">
                         <h3>Horario</h3>
+                        <p>Horarios : 11:00am–8:00pm</p>
                     </div>
                 </div>
                 
             </div>
         </section>
-        <!--Footer-->
+         <!-- Footer -->
+        <footer class="footer">
+        
+            <div class="container">
+            
+                <div class="row">
+                
+                    <div class="col-md-12">
+                        
+                      
+                            <div class="copys">
+                                <p>Copyright &copy; 2020 <a href="#"> - La Chata Restaurant</a></p>    
+                            </div>
+                            
+                      
+                    </div>
+                   
+                
+                </div>
+            
+            </div>
+        
+        
+        </footer>
         
          <!-- Bootstrap JavaScript -->
         <script src="js/jquery.js"></script>
