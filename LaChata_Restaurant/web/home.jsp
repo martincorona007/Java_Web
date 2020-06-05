@@ -62,7 +62,6 @@
                   <ul class="nav navbar-nav navbar-right">
                       <img src="../../../../Build by me/ITS/JAVAWEB/P3/markup/pictures/chata-logo.png" alt=""/>
                         <li><a href="#HOME" class="nav-item">Inicio</a></li>
-                        <li><a href="#ABOUT" class="nav-item">Menu</a></li>
                         <li><a href="#FEATURES" class="nav-item">Reservarción</a></li>
                         <li><a href="#SCREENS" class="nav-item">Galeria</a></li>
                         <li><a href="#DOWNLOAD" class="nav-item">Contacto</a></li>
@@ -85,16 +84,96 @@
                 <input type="submit" class="btn btn-success btn-lg"value="Reservar" />
             </div>
         </header>
-        <!--Menu-->
-        <section class="menu">
-            <div class="menu-overlay">
-             
+        <!--Gallery-->
+        <section class="gallery">
+              <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="section-title">
+                            <h1>Gallery</h1>
+                        </div>
+                            
+                    </div>
+                </div>
+               </div>
+            <div class="container">
+                <div class="division">
+                    <div class="row">
+                   
+                        <div class="col-md-4">
+                           <img class="image-pics" src="images/p1.jpg" class="rounded float-left" alt="">
+                       </div>
+                       <div class="col-md-4">
+                           <img class="image-pics" src="images/p2.jpg" class="rounded float-left" alt="">
+                       </div>
+                       <div class="col-md-4">
+                           <img class="image-pics" src="images/p3.png" class="rounded float-left" alt="">
+                       </div>
+                   
+                    </div>
+                </div>
+                <div class="division">
+                    <div class="row">
+                   
+                        <div class="col-md-4">
+                           <img class="image-pics" src="images/p4.jpg" class="rounded float-left" alt="">
+                       </div>
+                       <div class="col-md-4">
+                           <img class="image-pics" src="images/p5.jpg" class="rounded float-left" alt="">
+                       </div>
+                       <div class="col-md-4">
+                           <img class="image-pics" src="images/p6.png" class="rounded float-left" alt="">
+                       </div>
+                   
+                    </div>
+                </div>
+                <div class="division">
+                   <div class="row">
+                   
+                        <div class="col-md-4">
+                           <img class="image-pics" src="images/p7.jpg" class="rounded float-left" alt="">
+                       </div>
+                       <div class="col-md-4">
+                           <img class="image-pics" src="images/p8.jpg" class="rounded float-left" alt="">
+                       </div>
+                       <div class="col-md-4">
+                           <img class="image-pics" src="images/p9.jpg" class="rounded float-left" alt="">
+                       </div>
+                   
+                   </div>
+
+                </div>
+                
+            </div>
+            
+        </section>
+        <!--Contact Address Schedule-->
+        <section class="conctact">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="section-title">
+                            <h1>Conctact</h1>
+                        </div>
+                            
+                    </div>
+                </div>
+               </div>
+            <div class="separ">
+                <div class="row">
+                    <div class="col-md-4">
+                    <h3>Contacto</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Dirección</h3>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Horario</h3>
+                    </div>
+                </div>
+                
             </div>
         </section>
-        <!--Galerie-->
-        
-        <!--Contact Address Schedule-->
-        
         <!--Footer-->
         
          <!-- Bootstrap JavaScript -->
