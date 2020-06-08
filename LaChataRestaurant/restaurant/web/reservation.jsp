@@ -92,7 +92,7 @@
                        <!--
                             <p><a type="submit" class="btn btn-success btn-lg" href="restaurantController?action=guest">Reservarci?n</a></p>
                        -->
-                        <input type="submit" name="button1" value="Buy"/>
+                        <input type="submit" name="button1" value="Reservar"/>
                     </form>
                 </div>
                         

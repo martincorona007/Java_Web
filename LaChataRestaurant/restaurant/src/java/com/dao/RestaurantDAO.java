@@ -11,6 +11,7 @@ import com.model.Reservation;
 import com.util.DbUtil;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -52,17 +53,52 @@ public class RestaurantDAO {
             e.printStackTrace();
         }
     }
-    public void addLotToLot(ClCp data){
+    public void addLotToLot(int data1,int data2){
         try {
             PreparedStatement preparedStatement = connection.prepareStatement("insert into cl_cp(FK_ID_cd,FK_ID_r) values (?, ?)");
             // Parameters start with 1
-            preparedStatement.setString(1, String.valueOf(data.getFK_ID_cd()));
-            preparedStatement.setString(2, String.valueOf(data.getFK_ID_r()));
+            preparedStatement.setString(1, String.valueOf(data1));
+            preparedStatement.setString(2, String.valueOf(data2));
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    public ClientData getCleintByPhone(String cellPhone) {
+        ClientData ecos = new ClientData();
+        try {
+            PreparedStatement preparedStatement = connection.
+                    prepareStatement("select * from client_data where cell_phone=?");
+            preparedStatement.setString(1, cellPhone);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                ecos.setID_Cd(rs.getInt("ID_cd"));
+                ecos.setF_name(rs.getString("f_name"));
+                ecos.setL_name(rs.getString("l_name"));
+                
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ecos;
+    }
+    public Reservation geReservationByTime(String time) {
+        Reservation ecos = new Reservation();
+        try {
+            PreparedStatement preparedStatement = connection.
+                    prepareStatement("select * from reservation where time_res=?");
+            preparedStatement.setString(1, time);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            if (rs.next()) {
+                ecos.setID_r(rs.getInt("ID_r"));
+               }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return ecos;
     }
     public String convertirFechaString(Date date){
        return new SimpleDateFormat("yyyy-MM-dd").format(date);

@@ -64,9 +64,12 @@ public class restaurantController extends HttpServlet {
          
         } else if(action.equalsIgnoreCase("guest")){
             forward=GUEST;
-         //   int proId = Integer.parseInt(request.getParameter("prodId"));
+            
+           
+            //int proId = Integer.parseInt(request.getParameter("prodId"));
+            
          //   Product user = dao.getProduct(proId);
-         //   request.setAttribute("products", user);
+           // request.setAttribute("products", r2);
         }else if (action.equalsIgnoreCase("listMenu")) {
             forward = MENU;
         //    request.setAttribute("products", dao.getAllProduct());
@@ -92,7 +95,10 @@ public class restaurantController extends HttpServlet {
             ClientData cl=new ClientData();
             Reservation r1=new Reservation();
             try{
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+               
+                    
+             if(request.getParameter("button1")!=null){
+                  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 SimpleDateFormat shf = new SimpleDateFormat("HH:mm:ss");
 
                  //if(request.getParameter("button1")!=null){
@@ -108,8 +114,18 @@ public class restaurantController extends HttpServlet {
                     System.out.println("ENTRY 505 " + r1.getDate_res() + " " + r1.getTime_res() + " ");
                     dao.addReservation(r1);
                     dao.addClientInfo(cl);
-                    
-            
+                    String time = request.getParameter("time_res");
+                    String cellphone = request.getParameter("cell_phone");
+                    RestaurantDAO obj=new RestaurantDAO();
+                   // ClientData cl=new ClientData();
+                    Reservation r2=new Reservation();
+                    System.out.println("4004 time "+time+" cel"+cellphone);
+                     cl=obj.getCleintByPhone(cellphone);
+                     r2=obj.geReservationByTime(time);
+                     obj.addLotToLot(cl.getID_Cd(), r2.getID_r());
+             }else{
+                 
+             }
                
                 
                 
