@@ -1,0 +1,96 @@
+/*===================GENERICS===============*/
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.section-title{
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+.section-title h1 {
+    position: relative;
+    text-align: center;
+    color: #333;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+}
+.section-title h1:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 60px;
+    height: 1px;
+    background-color: #01f50e;
+    margin-left: -30px;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$ home jsp $$$$$$$$$$$$$$$$$$$$$$$*/
+
+/*===================HEADER===============*/
+
+.header{
+width: 100%;    
+}
+.header-overlay{
+    padding-top: 80px;
+    
+}
+.picture-1{
+    width: 120px;
+    padding-left: 380px;
+
+}
+#alter{
+    width:500px;
+    height:440px;
+}
+.centers{
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+}
+.boton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*===================Gallery===============*/
+.gallery{
+    
+}
+
+.gallery-overlay{
+    padding-top: 280px;
+    padding-bottom: 280px;
+}
+.image-pics{
+    width:380px;
+    height:300px;
+}
+.division{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+/*===================Conctact===============*/
+.separ{
+    padding-left: 280px;
+    padding-right: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+/*===================Footer===============*/
+.copys{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$ Reservation jsp $$$$$$$$$$$$$$$$$$$$$$$*/
+
+.section-reserv{
+    
+}
