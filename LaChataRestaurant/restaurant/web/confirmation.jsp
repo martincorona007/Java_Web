@@ -1,14 +1,17 @@
 <%-- 
-    Document   : confirmation
-    Created on : Jun 3, 2020, 7:14:09 PM
+    Document   : guest
+    Created on : Jun 3, 2020, 7:13:43 PM
     Author     : sicar
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Confirmation</title>
+  
+        <title>Guest</title>
          <!-- Google Fonts -->
         <link href='https://fonts.googleapis.com/css?family=Raleway:500italic,600italic,600,700,700italic,300italic,300,400,400italic,800,900' rel='stylesheet' type='text/css'>
         
@@ -35,13 +38,15 @@
         <link rel="stylesheet" type="text/css" href="css/responsive.css">
     </head>
     <body>
-        <section class="section-reserv">
+         <section class="section-reserv">
             <div class="container">
                 <div class="">
-                    <form method="POST" action="" name="frmAddProduct">
+                    <form method="POST" action="restaurantController" name="frmAddProduct">
+                        <h1>success</h1>
                         
-                        <input type="submit" value="Submit" />
+                        <p><a class="btn btn-success btn-lg" href="restaurantController?action=listMenu">Aceptar</a></p>
                     </form>
+                    
                 </div>
                         
             </div>
@@ -63,8 +68,5 @@
       
         <!-- Custom Js -->
         <script src="js/custom.js"></script>
-        
-        
-        
     </body>
 </html>

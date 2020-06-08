@@ -89,7 +89,33 @@
                             </div>
                              
                         </div>
+                        <div class="form-group row">
+                            <label for="example-time-input" class="col-2 col-form-label">Numero de invitados</label>
+                            <div class="col-10">
+                                <select name="guest_n" class="custom-select mb-2 mr-sm-2 mb-sm-0 form-control" id="inlineFormCustomSelect">
+                                <option class="form-control" selected>Choose...</option>
+                               
+                                <option name="guest_n" value="1">1</option>
+                                <option name="guest_n" value="2" >2</option>
+                                <option name="guest_n" value="3" >3</option>
+                                <option name="guest_n" value="4" >4</option>
+                                <option name="guest_n" value="5" >5</option>
+                                <option name="guest_n" value="6" >6</option>
+                                <option name="guest_n" value="7" >7</option>
+                                <option name="guest_n" value="8" >8</option>
+                                <option name="guest_n" value="9" >9</option>
+                               </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="example-date-input" class="col-2 col-form-label">Anotaciones</label>
+                            <div class="col-3">
+                               <input class="form-control" type="text" name="request_t" /> <br />
+                            </div>
+                        </div>
+                              
                        <!--
+                        
                             <p><a type="submit" class="btn btn-success btn-lg" href="restaurantController?action=guest">Reservarci?n</a></p>
                        -->
                         <input type="submit" name="button1" value="Reservar"/>

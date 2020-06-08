@@ -5,6 +5,7 @@
  */
 package com.dao;
 
+import com.model.Characteristics;
 import com.model.ClCp;
 import com.model.ClientData;
 import com.model.Reservation;
@@ -65,6 +66,19 @@ public class RestaurantDAO {
             e.printStackTrace();
         }
     }
+    public void addCharacteristics(Characteristics chaka){
+        try {
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into characteristics(FK_ID_r,guest_n,request_t) values (?, ?, ?)");
+            // Parameters start with 1
+            preparedStatement.setString(1, String.valueOf(chaka.getFK_ID_r()));
+            preparedStatement.setString(2, String.valueOf(chaka.getGuest_n()));
+            preparedStatement.setString(3, chaka.getRequest_t());
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public ClientData getCleintByPhone(String cellPhone) {
         ClientData ecos = new ClientData();
         try {
@@ -100,6 +114,7 @@ public class RestaurantDAO {
         }
         return ecos;
     }
+    
     public String convertirFechaString(Date date){
        return new SimpleDateFormat("yyyy-MM-dd").format(date);
     }

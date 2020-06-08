@@ -6,6 +6,7 @@
 package com.controller;
 
 import com.dao.RestaurantDAO;
+import com.model.Characteristics;
 import com.model.ClientData;
 import com.model.Reservation;
 import java.io.IOException;
@@ -94,9 +95,11 @@ public class restaurantController extends HttpServlet {
             throws ServletException, IOException {
             ClientData cl=new ClientData();
             Reservation r1=new Reservation();
-            try{
+            Characteristics obj2=new Characteristics();        
                
-                    
+            try{
+            int save;
+            Characteristics obj1=new Characteristics();
              if(request.getParameter("button1")!=null){
                   SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 SimpleDateFormat shf = new SimpleDateFormat("HH:mm:ss");
@@ -114,6 +117,7 @@ public class restaurantController extends HttpServlet {
                     System.out.println("ENTRY 505 " + r1.getDate_res() + " " + r1.getTime_res() + " ");
                     dao.addReservation(r1);
                     dao.addClientInfo(cl);
+                   
                     String time = request.getParameter("time_res");
                     String cellphone = request.getParameter("cell_phone");
                     RestaurantDAO obj=new RestaurantDAO();
@@ -122,11 +126,25 @@ public class restaurantController extends HttpServlet {
                     System.out.println("4004 time "+time+" cel"+cellphone);
                      cl=obj.getCleintByPhone(cellphone);
                      r2=obj.geReservationByTime(time);
+                     obj1.setFK_ID_r(r2.getID_r());
                      obj.addLotToLot(cl.getID_Cd(), r2.getID_r());
+                     System.out.print("pre "+obj1.getFK_ID_r()+" ");
+                     
+                     obj1.setFK_ID_r(obj1.getFK_ID_r());
+                    obj1.setGuest_n(Integer.parseInt(request.getParameter("guest_n")));
+                    obj1.setRequest_t(request.getParameter("request_t"));
+                    System.out.println("8088 ID "+obj1.getFK_ID_r()+" guest "+request.getParameter("guest_n")+" reguest"+request.getParameter("request_t"));
+                    dao.addCharacteristics(obj1);
+
+                     
+            
              }else{
                  
+                 
              }
-               
+             if(request.getParameter("button2")!=null){
+              System.out.println("pos ke si");   
+             }
                 
                 
            }catch(Exception ex){
