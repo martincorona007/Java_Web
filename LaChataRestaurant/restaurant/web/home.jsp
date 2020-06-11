@@ -61,10 +61,10 @@
                 <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
                   <ul class="nav navbar-nav navbar-right">
                       <img src="../../../../Build by me/ITS/JAVAWEB/P3/markup/pictures/chata-logo.png" alt=""/>
-                        <li><a href="#HOME" class="nav-item">Inicio</a></li>
-                        <li><a href="#FEATURES" class="nav-item">Reservarción</a></li>
-                        <li><a href="#SCREENS" class="nav-item">Galeria</a></li>
-                        <li><a href="#DOWNLOAD" class="nav-item">Contacto</a></li>
+                        <li><a href="#Inicio" class="nav-item">Inicio</a></li>
+                        <li><a href="#reservacion" class="nav-item">Reservarción</a></li>
+                        <li><a href="#gallery" class="nav-item">Galeria</a></li>
+                        <li><a href="#conctact" class="nav-item">Contacto</a></li>
                   </ul>
                  
                 </div><!-- /.navbar-collapse -->
@@ -184,30 +184,34 @@
             </div>
         </section>
          <!-- Footer -->
-        <footer class="footer">
-        
-            <div class="container">
-            
-                <div class="row">
-                
-                    <div class="col-md-12">
-                        
-                      
-                            <div class="copys">
-                                <p>Copyright &copy; 2020 <a href="#"> - La Chata Restaurant</a></p>    
-                            </div>
-                            
-                      
-                    </div>
+         <div class="color-footer">
+            <!-- Footer -->
+           <footer class="footer">
+           
+               <div class="container">
+               
+                   <div class="row">
                    
-                
-                </div>
-            
-            </div>
-        
-        
-        </footer>
-        
+                       <div class="col-md-12">
+                           
+                       
+                               <div class="copys">
+                                   <p>Copyright &copy; 2020 <a href="#"> - La Chata Restaurant</a></p>    
+                               </div>
+                               
+                       
+                       </div>
+                   
+                   
+                   </div>
+               
+               </div>
+           
+           
+           </footer>
+       </div>
+       <div class="color-footer-strong">
+
          <!-- Bootstrap JavaScript -->
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.min.js"></script>

@@ -27,6 +27,9 @@ body {
     background-color: #01f50e;
     margin-left: -30px;
 }
+.label-all{
+    color:lightyellow;
+}
 /*$$$$$$$$$$$$$$$$$$$$$$$ home jsp $$$$$$$$$$$$$$$$$$$$$$$*/
 
 /*===================HEADER===============*/
@@ -44,8 +47,8 @@ width: 100%;
 
 }
 #alter{
-    width:500px;
-    height:440px;
+    width:380px;
+    height:332px;
 }
 .centers{
     margin-top: 50px;
@@ -70,6 +73,10 @@ width: 100%;
 .image-pics{
     width:380px;
     height:300px;
+    border: 2px solid #01f50e;
+    border-radius: 5%;
+    padding: 3px;
+
 }
 .division{
     padding-top: 25px;
@@ -92,5 +99,77 @@ width: 100%;
 /*$$$$$$$$$$$$$$$$$$$$$$$ Reservation jsp $$$$$$$$$$$$$$$$$$$$$$$*/
 
 .section-reserv{
+  
+}
+.reserva-inner .item img{
+    border: 2px solid #01f50e;
+    border-radius: 10%;
+    padding: 3px;
+}
+.reserva-inner{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.back-ground{
+   
+    background-color: rgba(31, 31, 0, 0.25);
+}
+.back-grounded {
+    background-image: url("../images/p6.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
     
+}
+.color-footer{
+    background-color: rgba(32, 255, 2, 0.459);
+}
+.color-footer-strong{
+    background-color: rgba(9, 245, 71, 0.63);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.copys1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$ confirmation.sp $$$$$$$$$$$$$$$$$$$$$$$*/
+.back-ground1{
+    background-color: rgba(31, 31, 0, 0.25);
+}
+.back-grounded1 {
+    background-image: url("../images/p10.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+  
+
+    
+}
+
+.reserva-inners .item img{
+    border: 2px solid #01f50e;
+    border-radius: 50%;
+    padding: 3px;
+}
+#alters{
+    width:300px;
+    height:290px;
+}
+.section-reserv1{
+
+}
+#alterk{
+    width:780px;
+    height:332px;
 }
