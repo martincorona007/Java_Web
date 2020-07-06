@@ -18,7 +18,7 @@ JSP,Servlet,BEAN,DAO,Util,MVC
 JSP,Servlet,BEAN,DAO,Util,MVC,Hibernate,POJOS
 ![p2](https://user-images.githubusercontent.com/31390537/81506554-c41d8f80-92bc-11ea-8300-1784bab98bbe.PNG)
 
-##LaChataRestaurant##
+## LaChataRestaurant ##
 JSP,Servlet,BEAN,DAO,POJOS,Util
 ![p1](https://user-images.githubusercontent.com/31390537/86605306-27016f00-bf6c-11ea-9feb-d00c0f1d752e.png)
 ![p2](https://user-images.githubusercontent.com/31390537/86605314-2a94f600-bf6c-11ea-9ab8-38e983aba013.png)
