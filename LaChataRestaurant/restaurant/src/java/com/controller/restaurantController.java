@@ -116,7 +116,7 @@ public class restaurantController extends HttpServlet {
                     r1.setTime_res(request.getParameter("time_res"));
                     System.out.println("ENTRY 505 " + r1.getDate_res() + " " + r1.getTime_res() + " ");
                     dao.addReservation(r1);
-                    dao.addClientInfo(cl);
+                    dao.addClientInfo(cl); 
                    
                     String time = request.getParameter("time_res");
                     String cellphone = request.getParameter("cell_phone");
@@ -149,6 +149,7 @@ public class restaurantController extends HttpServlet {
                 
            }catch(Exception ex){
                System.out.println("1x++++++++++"+ex.getMessage());
+               System.out.println("1x++++++++++"+ex);
            }
 
      

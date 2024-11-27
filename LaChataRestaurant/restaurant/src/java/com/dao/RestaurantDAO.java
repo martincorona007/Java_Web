@@ -38,6 +38,7 @@ public class RestaurantDAO {
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
+            System.out.println(e);
             e.printStackTrace();
         }
     }
